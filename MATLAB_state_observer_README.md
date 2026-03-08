@@ -75,14 +75,15 @@ Observer-based state feedback control. Demonstrates the separation principle: in
 
 ### 03_kalman_filter — Optimal Stochastic Estimation
 
-Standard discrete-time Kalman filter for systems with process noise and measurement noise. Includes steady-state Kalman filter.
+Standard discrete-time Kalman filter for systems with process noise and measurement noise. Includes steady-state Kalman filter and continuous-time Kalman-Bucy filter.
 
-- **Blog article**: [State Observer and State Estimation: A Comprehensive Guide](https://blog.control-theory.com/entry/state-observer-estimation)
+- **Blog article**: [Kalman Filter: From Basic Algorithm to Multi-Rate Extensions](https://blog.control-theory.com/entry/kalman-filter)
 
 ### 04_hinf_filter — Robust H∞ Filter via LMI
 
 H-infinity filter design using Linear Matrix Inequalities (LMIs). Minimizes the worst-case estimation error gain without requiring statistical noise assumptions.
 
+- **Blog article**: [H-infinity Filter: Robust State Estimation Using LMI Optimization](https://blog.control-theory.com/entry/h-infinity-filter)
 - **Blog article**: [Linear Matrix Inequalities (LMIs) and Controller Design](https://blog.control-theory.com/entry/lmi-eng)
 - **Research page**: [Linear Matrix Inequality](https://www.control-theory.com/en/linear-matrix-inequality)
 
@@ -157,6 +158,8 @@ Median of Candidate Vectors (MCV) observer for state estimation robust to sensor
 | **Hub: State Observer and State Estimation** | [blog.control-theory.com/entry/state-observer-estimation](https://blog.control-theory.com/entry/state-observer-estimation) |
 | State Observer: Basic Mechanism | [blog.control-theory.com/entry/2024/02/28/100201](https://blog.control-theory.com/entry/2024/02/28/100201) |
 | State Observer for State Space Model | [blog.control-theory.com/entry/2024/10/01/143305](https://blog.control-theory.com/entry/2024/10/01/143305) |
+| Kalman Filter | [blog.control-theory.com/entry/kalman-filter](https://blog.control-theory.com/entry/kalman-filter) |
+| H-infinity Filter | [blog.control-theory.com/entry/h-infinity-filter](https://blog.control-theory.com/entry/h-infinity-filter) |
 | System Identification: Obtaining Dynamical Model | [blog.control-theory.com/entry/2024/10/03/151451](https://blog.control-theory.com/entry/2024/10/03/151451) |
 | Multi-Rate Observer | [blog.control-theory.com/entry/multirate-observer-eng](https://blog.control-theory.com/entry/multirate-observer-eng) |
 | MCV Observer | [blog.control-theory.com/entry/mcv-observer-eng](https://blog.control-theory.com/entry/mcv-observer-eng) |
