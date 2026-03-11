@@ -38,22 +38,13 @@ MATLAB_state_observer/
 │   ├── main_multirate_feedback.m
 │   └── README.md
 │
-├── 07_multirate_sysid/              Multirate system identification (JRM 2025)
-│   ├── main_multirate_sysid.m
-│   └── README.md
-│
-├── 08_multirate_kalman/             Multi-rate Kalman filter via LMI (arXiv 2026)
+├── 07_multirate_kalman/             Multi-rate Kalman filter via LMI (arXiv 2026)
 │   ├── main_multirate_kalman.m
 │   └── README.md
 │
-├── 09_mcv_observer/                 MCV observer: outlier-robust estimation (JCMSI 2021)
-│   ├── main_mcv_observer.m
-│   └── README.md
-│
-└── common/                          Shared utility functions
-    ├── cyclic_reformulation.m
-    ├── build_V_matrix.m
-    └── lmi_utils.m
+└── 08_mcv_observer/                 MCV observer: outlier-robust estimation (JCMSI 2021)
+    ├── main_mcv_observer.m
+    └── README.md
 ```
 
 ---
@@ -92,7 +83,7 @@ H-infinity filter design using Linear Matrix Inequalities (LMIs). Minimizes the 
 Periodically time-varying state observer for systems where sensors operate at different sampling rates. Observer gains designed via LMI optimization of the l2-induced norm.
 
 - **Paper**: H. Okajima, Y. Hosoe and T. Hagiwara, "[State Observer Under Multi-Rate Sensing Environment and Its Design Using l2-Induced Norm](https://ieeexplore.ieee.org/document/10054014)," IEEE Access (2023)
-- **Blog article**: [State Observer Under Multi-Rate Sensing Environment](https://blog.control-theory.com/entry/multirate-observer-eng)
+- **Blog article**: [State Observer Under Multi-Rate Sensing Environment and Its Design Using l2-Induced Norm](https://blog.control-theory.com/entry/2026/03/04/081748)
 - **MATLAB File Exchange**: [State Estimation under Multi-Rate Sensing: IEEE ACCESS 2023](https://jp.mathworks.com/matlabcentral/fileexchange/182941-state-estimation-under-multi-rate-sensing-ieee-access-2023)
 - **Code Ocean**: [Multi-Rate System Code](https://codeocean.com/capsule/3611894/tree/v1)
 - **Research page**: [Multi-rate System](https://www.control-theory.com/en/multi-rate-system)
@@ -102,31 +93,23 @@ Periodically time-varying state observer for systems where sensors operate at di
 Complete observer-based feedback controller for multi-rate systems using cyclic reformulation.
 
 - **Paper**: H. Okajima, K. Arinaga and A. Hayashida, "[Design of observer-based feedback controller for multi-rate systems with various sampling periods using cyclic reformulation](https://ieeexplore.ieee.org/document/10304152)," IEEE Access (2023)
-- **Blog article**: [State Observer Under Multi-Rate Sensing Environment](https://blog.control-theory.com/entry/multirate-observer-eng)
+- **Blog article**: [State Observer Under Multi-Rate Sensing Environment and Its Design Using l2-Induced Norm](https://blog.control-theory.com/entry/2026/03/04/081748)
 - **Research page**: [Multi-rate System](https://www.control-theory.com/en/multi-rate-system)
 
-### 07_multirate_sysid — Multirate System Identification
-
-System identification under multirate sensing environments using cyclic reformulation and subspace identification (N4SID). Works with arbitrary (non-periodic) inputs.
-
-- **Paper**: H. Okajima, R. Furukawa and N. Matsunaga, "[System Identification Under Multirate Sensing Environments](https://doi.org/10.20965/jrm.2025.p1102)," Journal of Robotics and Mechatronics, Vol. 37, No. 5, pp. 1102–1112 (2025) **(Open Access)**
-- **Blog article**: [System Identification Under Multirate Sensing Environments](https://blog.control-theory.com/entry/multirate-sysid-eng)
-- **Research page**: [Multi-rate System](https://www.control-theory.com/en/multi-rate-system)
-
-### 08_multirate_kalman — Multi-Rate Kalman Filter via LMI
+### 07_multirate_kalman — Multi-Rate Kalman Filter via LMI
 
 Steady-state Kalman filter design for multirate systems using LMI optimization with cyclic reformulation.
 
 - **Paper**: H. Okajima, "LMI Optimization Based Multirate Steady-State Kalman Filter Design," [arXiv:2602.01537](https://arxiv.org/abs/2602.01537) (2026, submitted)
 - **Research page**: [Multi-rate System](https://www.control-theory.com/en/multi-rate-system)
 
-### 09_mcv_observer — MCV Observer (Outlier-Robust)
+### 08_mcv_observer — MCV Observer (Outlier-Robust)
 
 Median of Candidate Vectors (MCV) observer for state estimation robust to sensor outliers. Multiple estimation candidates are generated and the median operation selects one unaffected by outliers.
 
 - **Paper**: H. Okajima, Y. Kaneda and N. Matsunaga, "[State estimation method using median of multiple candidates for observation signals including outliers](https://doi.org/10.1080/18824889.2021.1985702)," SICE JCMSI, Vol. 14, No. 1, pp. 257–267 (2021) **(Open Access)**
-- **Blog article**: [Outlier-Robust State Estimation: MCV Observer](https://blog.control-theory.com/entry/mcv-observer-eng)
-- **Blog article**: [State Estimation Unaffected by Sensor Outliers: MCV Approach](https://blog.control-theory.com/entry/2024/10/01/093531)
+- **Blog article**: [State Estimation Method Using Median of Multiple Candidates for Observation Signals Including Outliers](https://blog.control-theory.com/entry/2026/03/04/084603)
+- **Blog article**: [State estimator unaffected by sensor outliers: MCV approach](https://blog.control-theory.com/entry/2024/10/01/093531)
 - **MATLAB File Exchange**: [Outlier-Robust State Estimator: JCMSI 2021](https://jp.mathworks.com/matlabcentral/fileexchange/182942-outlier-robust-state-estimator-jcmsi-2021)
 - **Research page**: [MCV Observer for Overcoming Outliers](https://www.control-theory.com/en/mcv-observer)
 
@@ -136,7 +119,7 @@ Median of Candidate Vectors (MCV) observer for state estimation robust to sensor
 
 - **MATLAB** (R2020a or later recommended)
 - **Control System Toolbox**
-- **Robust Control Toolbox** (for LMI-based designs in `04_hinf_filter`, `05_multirate_observer`, `08_multirate_kalman`)
+- **Robust Control Toolbox** (for LMI-based designs in `04_hinf_filter`, `05_multirate_observer`, `07_multirate_kalman`)
 
 ---
 
@@ -160,9 +143,11 @@ Median of Candidate Vectors (MCV) observer for state estimation robust to sensor
 | State Observer for State Space Model | [blog.control-theory.com/entry/2024/10/01/143305](https://blog.control-theory.com/entry/2024/10/01/143305) |
 | Kalman Filter | [blog.control-theory.com/entry/kalman-filter](https://blog.control-theory.com/entry/kalman-filter) |
 | H-infinity Filter | [blog.control-theory.com/entry/h-infinity-filter](https://blog.control-theory.com/entry/h-infinity-filter) |
+| Multi-Rate Observer | [blog.control-theory.com/entry/2026/03/04/081748](https://blog.control-theory.com/entry/2026/03/04/081748) |
+| MCV Observer (Research) | [blog.control-theory.com/entry/2026/03/04/084603](https://blog.control-theory.com/entry/2026/03/04/084603) |
+| MCV Observer (Overview) | [blog.control-theory.com/entry/2024/10/01/093531](https://blog.control-theory.com/entry/2024/10/01/093531) |
+| System Identification Hub | [blog.control-theory.com/entry/system-identification](https://blog.control-theory.com/entry/system-identification) |
 | System Identification: Obtaining Dynamical Model | [blog.control-theory.com/entry/2024/10/03/151451](https://blog.control-theory.com/entry/2024/10/03/151451) |
-| Multi-Rate Observer | [blog.control-theory.com/entry/multirate-observer-eng](https://blog.control-theory.com/entry/multirate-observer-eng) |
-| MCV Observer | [blog.control-theory.com/entry/mcv-observer-eng](https://blog.control-theory.com/entry/mcv-observer-eng) |
 | LMI and Controller Design | [blog.control-theory.com/entry/lmi-eng](https://blog.control-theory.com/entry/lmi-eng) |
 | Model Error Compensator (MEC) | [blog.control-theory.com/entry/model-error-compensator-eng](https://blog.control-theory.com/entry/model-error-compensator-eng) |
 | Discretization | [blog.control-theory.com/entry/discretization-eng](https://blog.control-theory.com/entry/discretization-eng) |
@@ -184,6 +169,12 @@ Median of Candidate Vectors (MCV) observer for state estimation robust to sensor
 
 - [Multi-Rate System Code](https://codeocean.com/capsule/3611894/tree/v1)
 
+### Other GitHub Repositories
+
+- [MATLAB_system_identification](https://github.com/Hiroshi-Okajima/MATLAB_system_identification) — System identification codes (multirate SysID uses the identified model for observer design)
+- [MATLAB_fandamental_control_LMI](https://github.com/Hiroshi-Okajima/MATLAB_fandamental_control_LMI) — LMI-based control design
+- [Robust-control-MATLAB_MEC01](https://github.com/Hiroshi-Okajima/Robust-control-MATLAB_MEC01) — Model Error Compensator
+
 ### Video
 
 - [YouTube: Control Engineering Channel](https://www.youtube.com/channel/UC121T0-DD2KBuqxWx2GGRkg)
@@ -194,12 +185,6 @@ Median of Candidate Vectors (MCV) observer for state estimation robust to sensor
 ## Migration Note
 
 This repository consolidates and extends the previous repository [MATLAB_state_estimation](https://github.com/Hiroshi-Okajima/MATLAB_state_estimation) (MCV observer code). The original repository remains available but is no longer updated. New code and updates will be added here.
-
----
-
-## GitHub Topics (for discoverability)
-
-`state-observer` `state-estimation` `kalman-filter` `luenberger-observer` `h-infinity` `lmi` `multirate-systems` `sensor-fusion` `robust-estimation` `control-engineering` `matlab` `matlab-codes` `observer-design` `cyclic-reformulation` `outlier-robust`
 
 ---
 
